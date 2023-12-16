@@ -16,7 +16,7 @@ string spell(string word) {
     }
     if (letters[length-2] == 'o' && letters[length-1] == 'r') {
         char thirdLastChar = letters[length-3];
-
+        if (thirdLastChar != 'a' && thirdLastChar != 'e' &&  thirdLastChar != 'i' &&  
             thirdLastChar != 'o' &&  thirdLastChar != 'u' &&  thirdLastChar != 'y') {
             return word.substr(0, length-2) + "our";
         } 
