@@ -1,6 +1,6 @@
 # Competitive Programming
 ---
-## Junior Training Sheet: ___
+## Junior Training Sheet: [Link](https://docs.google.com/spreadsheets/d/1b5Z5IgLR7RHhMNnnS_nccTdA33M0H4g9JeX6LME3wHQ/edit?usp=sharing)
 ---
 # CCC
 ## 2000
@@ -9,4 +9,8 @@
 - [x] [J2-ModInverse.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2001/J2-ModInverse.cpp)
 ## 2002
 - [x] [J2-AmeriCanadian.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2002/J2-AmeriCanadian.cpp)
+## 2004
+- [x] [J3-Smile_with_Similes.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2004/J3-Smile_with_Similes.cpp)
+## 2005
+- [x] [J3-Returning_Home.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2005/J3-Returning_Home.cpp)
 ---
