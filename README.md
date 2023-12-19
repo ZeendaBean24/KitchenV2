@@ -1,6 +1,6 @@
 # Competitive Programming
 ---
-## Junior Training Sheet: ___
+## Junior Training Sheet: [Link](https://docs.google.com/spreadsheets/d/1b5Z5IgLR7RHhMNnnS_nccTdA33M0H4g9JeX6LME3wHQ/edit?usp=sharing)
 ---
 # CCC
 ## 2000
