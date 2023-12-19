@@ -13,4 +13,9 @@
 - [x] [J3-Smile_with_Similes.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2004/J3-Smile_with_Similes.cpp)
 ## 2005
 - [x] [J3-Returning_Home.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2005/J3-Returning_Home.cpp)
+# JuniorProgrammingSheet
+## Div-A
+- [x] [Anton_and_Danik.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-A/Anton_and_Danik.cpp)
+- [x] [Bear_and_Big_Brother.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-A/Bear_and_Big_Brother.cpp)
+- [x] [Vanya_and_Fence.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-A/Vanya_and_Fence.cpp)
 ---
