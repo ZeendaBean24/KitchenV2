@@ -1,0 +1,19 @@
+[
+	{
+		"correct_answers":
+		[
+			"CHAT WITH HER!"
+		],
+		"test": "wjmzbmr\n"
+	},
+	{
+		"correct_answers":
+		[
+			"IGNORE HIM!"
+		],
+		"test": "xiaodao\n"
+	},
+	{
+		"test": "sevenkplus\n"
+	}
+]
