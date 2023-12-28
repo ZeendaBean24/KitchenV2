@@ -10,7 +10,6 @@ typedef vector<int> vi; typedef vector<string> vs; typedef vector<char> vc;
 #define SQ(a) (a)*(a);
 
 int main() {
-
 	int n, a; cin >> n >> a;
 	vi criminals;
 
