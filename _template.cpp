@@ -13,6 +13,5 @@ typedef pair<int, int> pii; typedef pair<long long, long long> pll;
 int main() {
 
 
-    
     return 0;
 }
