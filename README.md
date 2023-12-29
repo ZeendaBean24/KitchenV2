@@ -1,3 +1,13 @@
+
+## Div-B
+- [x] [Bear_and_Finding_Criminals.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Bear_and_Finding_Criminals.cpp)
+- [x] [Burglar_and_Matches.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Burglar_and_Matches.cpp)
+- [x] [Caisa_and_Pylons.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Caisa_and_Pylons.cpp)
+- [x] [Coins.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Coins.cpp)
+- [x] [Petya_and_Countryside.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Petya_and_Countryside.cpp)
+- [x] [Sum_of_Digits.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Sum_of_Digits.cpp)
+---
+
 # Competitive Programming
 ---
 ## Junior Training Sheet: [Link](https://docs.google.com/spreadsheets/d/1b5Z5IgLR7RHhMNnnS_nccTdA33M0H4g9JeX6LME3wHQ/edit?usp=sharing)
@@ -47,3 +57,4 @@
 - [x] [Way_Too_Long_Words.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-A/Way_Too_Long_Words.cpp)
 - [x] [Word.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-A/Word.cpp)
 ---
+
