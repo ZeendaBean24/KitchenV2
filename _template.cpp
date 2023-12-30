@@ -11,7 +11,6 @@ typedef pair<int, int> pii; typedef pair<long long, long long> pll;
 #define SQ(a) (a)*(a);
 
 int main() {
+    fastio;
 
-
-    return 0;
 }
