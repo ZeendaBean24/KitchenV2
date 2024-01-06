@@ -13,6 +13,8 @@
 - [x] [J3-Smile_with_Similes.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2004/J3-Smile_with_Similes.cpp)
 ## 2005
 - [x] [J3-Returning_Home.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2005/J3-Returning_Home.cpp)
+## 2021
+- [x] [S3-Lunch_Concert.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2021/S3-Lunch_Concert.cpp)
 ## 2022
 - [x] [S1-GoodFoursAndGoodFives.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2022/S1-GoodFoursAndGoodFives.cpp)
 # JuniorProgrammingSheet
@@ -46,12 +48,20 @@
 - [x] [Vanya_and_Fence.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-A/Vanya_and_Fence.cpp)
 - [x] [Way_Too_Long_Words.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-A/Way_Too_Long_Words.cpp)
 - [x] [Word.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-A/Word.cpp)
----
 ## Div-B
 - [x] [Bear_and_Finding_Criminals.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Bear_and_Finding_Criminals.cpp)
 - [x] [Burglar_and_Matches.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Burglar_and_Matches.cpp)
 - [x] [Caisa_and_Pylons.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Caisa_and_Pylons.cpp)
 - [x] [Coins.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Coins.cpp)
+- [x] [Decoding.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Decoding.cpp)
+- [x] [Easter_Eggs.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Easter_Eggs.cpp)
+- [x] [Effective_Approach.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Effective_Approach.cpp)
+- [x] [Fence.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Fence.cpp)
+- [x] [Lovely_Palindromes.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Lovely_Palindromes.cpp)
 - [x] [Petya_and_Countryside.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Petya_and_Countryside.cpp)
+- [x] [Presidents_Office.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Presidents_Office.cpp)
+- [x] [Sort_the_Array.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Sort_the_Array.cpp)
 - [x] [Sum_of_Digits.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Sum_of_Digits.cpp)
+- [x] [Summer_Sell-off.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Summer_Sell-off.cpp)
+- [x] [Vanya_and_Lanterns.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Vanya_and_Lanterns.cpp)
 ---
