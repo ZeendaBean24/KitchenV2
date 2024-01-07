@@ -3,7 +3,7 @@
 using namespace std;
 
 typedef long long ll; typedef long double ld;
-typedef vector<int> vi; typedef vector<string> vs; typedef vector<char> vc;
+typedef vector<int> vi; typedef vector<string> vs; typedef vector<char> vc; typedef vector<long long> vll;
 typedef pair<int, int> pii; typedef pair<long long, long long> pll;
 
 #define fastio ios_base::sync_with_stdio(false); cin.tie(nullptr)
@@ -12,5 +12,7 @@ typedef pair<int, int> pii; typedef pair<long long, long long> pll;
 
 int main() {
     fastio;
+
+
 
 }
