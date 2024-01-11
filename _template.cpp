@@ -8,7 +8,7 @@ typedef pair<int, int> pii; typedef pair<long long, long long> pll;
 
 #define fastio ios_base::sync_with_stdio(false); cin.tie(nullptr)
 #define REP(i,a,b) for (int i = a; i < b; i++)
-#define SQ(a) (a)*(a);
+#define SQ(a) (a)*(a)
 
 int main() {
     fastio;
