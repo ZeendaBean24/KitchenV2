@@ -71,9 +71,9 @@
 - [x] [Sum_of_Digits.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Sum_of_Digits.cpp)
 - [x] [Summer_Sell-off.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Summer_Sell-off.cpp)
 - [x] [Vanya_and_Lanterns.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Vanya_and_Lanterns.cpp)
-# WOSS Junior Mirror 2024
-- [x] [J1.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/WOSS Junior Mirror 2024/J1.cpp)
-- [x] [J2.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/WOSS Junior Mirror 2024/J2.cpp)
-# WOSS Senior Mirror 2024
-- [x] [S1-Moving_Sand.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/WOSS Senior Mirror 2024/S1-Moving_Sand.cpp)
+# WOSSJuniorMirror2024
+- [x] [J1.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/WOSSJuniorMirror2024/J1.cpp)
+- [x] [J2.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/WOSSJuniorMirror2024/J2.cpp)
+# WOSSSeniorMirror2024
+- [x] [S1-Moving_Sand.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/WOSSSeniorMirror2024/S1-Moving_Sand.cpp)
 ---
