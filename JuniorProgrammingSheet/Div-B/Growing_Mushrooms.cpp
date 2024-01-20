@@ -35,7 +35,7 @@ int main() {
     	double height = max((speed[0] * t1 * (1 - k * 0.01)) + (speed[1] * t2), (speed[1] * t1 * (1 - k * 0.01)) + (speed[0] * t2));
     	dwarfs.push_back(make_pair(height, speed[2]));
     }
-
+x
     auto comparator = [](const pair<double, int>& a, const pair<double, int>& b) {
     	if (a.first != b.first) {
     		return a.first > b.first;
