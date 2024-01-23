@@ -10,10 +10,23 @@ typedef pair<int, int> pii; typedef pair<long long, long long> pll;
 #define REP(i,a,b) for (int i = a; i < b; i++)
 #define SQ(a) (a)*(a)
 
+
+
 int main() {
     fastio;
-    // freopen("problemname.in", "r", stdin);
-    // freopen("problemname.out", "w", stdout);
+    freopen("cowsignal.in", "r", stdin);
+	freopen("cowsignal.out", "w", stdout);
 
-
+    int m, n, k; cin >> m >> n >> k;
+    REP(i,0,m) {
+    	string row; cin >> row;
+    	REP(j,0,k) {
+    		for (char c : row) {
+	    		REP(l,0,k) {
+	    			cout << c;
+	    		}
+	    	}
+	    	cout << endl;
+    	}
+    }
 }
