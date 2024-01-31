@@ -77,6 +77,15 @@
 - [x] [Sum_of_Digits.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Sum_of_Digits.cpp)
 - [x] [Summer_Sell-off.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Summer_Sell-off.cpp)
 - [x] [Vanya_and_Lanterns.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Vanya_and_Lanterns.cpp)
+# USACO
+## Bronze
+- [x] [Balancing_Bacteria.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/USACO/Bronze/Balancing_Bacteria.cpp)
+- [x] [Cannonball.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/USACO/Bronze/Cannonball.cpp)
+- [x] [Majority_Opinion.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/USACO/Bronze/Majority_Opinion.cpp)
+- [x] [Mowing_the_Field.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/USACO/Bronze/Mowing_the_Field.cpp)
+- [x] [Stuck_in_a_rut.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/USACO/Bronze/Stuck_in_a_rut.cpp)
+- [x] [cowsignal.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/USACO/Bronze/cowsignal.cpp)
+- [x] [lostcow.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/USACO/Bronze/lostcow.cpp)
 # WOSSJuniorMirror2024
 - [x] [J1.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/WOSSJuniorMirror2024/J1.cpp)
 - [x] [J2.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/WOSSJuniorMirror2024/J2.cpp)
