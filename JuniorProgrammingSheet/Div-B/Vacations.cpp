@@ -30,7 +30,7 @@ int main() {
             rest++;
             numberIndex = {i, -1};
         }
-        if (schedule[i] == 1 || schedule[i] == 2) {
+        if (schedule[i]  == 1 || schedule[i] == 2) {
             if (numberIndex.second == schedule[i]) {
                 if ((i-numberIndex.first) % 2 == 1) {
                     rest++;
