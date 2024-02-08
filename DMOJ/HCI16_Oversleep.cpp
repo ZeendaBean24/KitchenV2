@@ -39,79 +39,37 @@ int main() {
     	matrix.push_back(row);
     }
 
-    queue<int> q;
-    bool visited[n*m];
-    int distance[n*m];
+    queue<pii> q;
+    vector<vector<bool>> visited(n, vector<bool>(m, false));
+    vector<vi> distance(n, vi(m, INT_MAX));
 
-    // Left most = 0, then go right, then go down
-    int loc = start.first * m + start.second;
+    q.push(start);
+    visited[start.first][start.second] = true;
+    distance[start.first][start.second] = 0;
 
-    visited[loc] = true;
-    distance[loc] = 0;
-    q.push(loc);
-
-    int ans = 100000;
+    // Directions
+    int directions[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
     while (!q.empty()) {
-    	int s = q.front();
-    	q.pop();
+        auto s = q.front();
+        q.pop();
 
-    	int row = s / m; 
-    	int col = s % m;
+        if (s == end) {
+            cout << distance[s.first][s.second]-1;
+            return 0;
+        }
 
-    	// Check up
-    	if (row != 0) {
-    		if (matrix[row-1][col] == 0) {
-    			if (visited[s-m]) {
-    				continue;
-    			}
-    			q.push(s-m);
-    			visited[s-m] = true;
-    			distance[s-m] = distance[s] + 1;
-    		}
-    		// if (matrix[row-1][col] == 2) {
+        for (auto dir : directions) {
+            int newRow = s.first + dir[0];
+            int newCol = s.second + dir[1];
 
-    		// }
-    	}
-
-    	// Check down
-    	if (row != n-1) {
-    		if (matrix[row+1][col] == 0) {
-    			if (visited[s+m]) {
-    				continue;
-    			}
-    			q.push(s+m);
-    			visited[s+m] = true;
-    			distance[s+m] = distance[s] + 1;
-    		}
-    	}
-
-    	// Check left
-    	if (col != 0) {
-    		if (matrix[row][col-1] == 0) {
-    			if (visited[s-1]) {
-    				continue;
-    			}
-    			q.push(s-1);
-    			visited[s-1] = true;
-    			distance[s-1] = distance[s] + 1;
-    		}
-    	}
-
-   		// Check right
-   		if (col != m-1) {
-    		if (matrix[row][col+1] == 0) {
-    			if (visited[s+1]) {
-    				continue;
-    			}
-    			q.push(s+1);
-    			visited[s+1] = true;
-    			distance[s+1] = distance[s] + 1;
-    		}
-    	}
+            if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < m && matrix[newRow][newCol] != -1 && !visited[newRow][newCol]) {
+                q.push({newRow, newCol});
+                visited[newRow][newCol] = true;
+                distance[newRow][newCol] = distance[s.first][s.second] + 1;
+            }
+        }
     }
 
-    // REP(i, 0, m*n) {
-    // 	cout << distance[i] << " ";
-    // }
+    cout << -1;
 }
