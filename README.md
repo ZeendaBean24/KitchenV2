@@ -17,6 +17,10 @@
 - [x] [S3-Lunch_Concert.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2021/S3-Lunch_Concert.cpp)
 ## 2022
 - [x] [S1-GoodFoursAndGoodFives.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2022/S1-GoodFoursAndGoodFives.cpp)
+## 2023
+- [x] [J5-CCCWordHunt.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2023/J5-CCCWordHunt.cpp)
+# DMOJ
+- [x] [HCI16_Oversleep.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/DMOJ/HCI16_Oversleep.cpp)
 # JuniorProgrammingSheet
 ## Div-A
 - [x] [Anton_and_Danik.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-A/Anton_and_Danik.cpp)
@@ -76,7 +80,9 @@
 - [x] [Students_and_Shoelaces.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Students_and_Shoelaces.cpp)
 - [x] [Sum_of_Digits.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Sum_of_Digits.cpp)
 - [x] [Summer_Sell-off.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Summer_Sell-off.cpp)
+- [x] [Vacations.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Vacations.cpp)
 - [x] [Vanya_and_Lanterns.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Vanya_and_Lanterns.cpp)
+- [x] [Woodcutters.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/JuniorProgrammingSheet/Div-B/Woodcutters.cpp)
 # USACO
 ## Bronze
 - [x] [Balancing_Bacteria.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/USACO/Bronze/Balancing_Bacteria.cpp)
