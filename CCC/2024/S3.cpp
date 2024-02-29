@@ -29,58 +29,72 @@ int main() {
         final.push_back(b);
     }
 
-    vi swipes;
-    REP(i,0,n) {
+    vector<vi> possibleSwipes; // 0 = left swipe, // 1 = right swipe
+    bool possible = true;
+    int start = 0;
+    int end;
+
+
+    REP(i,0,n) { 
+        int target;
         if (initial[i] != final[i]) {
-            swipes.push_back(i);
+            if (start == 0) {
+                start = i;
+                target = final[i];
+                cout << "Target" << target;
+            } 
+            if (i == n-1 || final[i] != target) {
+                if (i == n-1) {
+                    end = i;
+                } else {
+                    end = i-1;
+                }
+                cout << start << " " << end;
+                int possibleSides = 2;
+                if (start != 0) { // check left
+                    if (initial[start-1] != target) {
+                        possibleSides--;
+                    } else {
+                        possibleSwipes.push_back({1, start-1, end});
+                    }
+                } else {
+                    possibleSides--;
+                }
+                if (end != n-1) { // check right
+                    if (initial[end+1] != target) {
+                        possibleSides--;
+                    } else {
+                        possibleSwipes.push_back({0, start, end+1});
+                    }
+                } else {
+                    possibleSides--;
+                }
+                if (possibleSides == 0) {
+                    possible = false;
+                    break;
+                }
+                start = 0;
+            }
         }
     }
 
-    int l = swipes.size();
-    if (l == 0) {
+    // for (vi s : possibleSwipes) {
+    //     cout << s[0] << " " << s[1] << " " << s[2] << endl;
+    // }
+
+    if (possibleSwipes.size() == 0) {
         cout << "YES" << endl << 0;
-        return 0;
+    } else if (!possible) {
+        cout << "NO";
     } else {
-        int lastIndex = swipes[0];
-        int lastNumber = final[swipes[0]];
-        bool possible = true;
-        
-
-        if (l != 0) {
-            REP(i,1,l) {
-                if (swipes[i] - lastIndex != 1) {
-                    possible = false;
-                    break;
-                }
-                if (final[swipes[i]] != lastNumber) {
-                    possible = false;
-                    break;
-                }
-                lastNumber = final[swipes[i]];
-                lastIndex = swipes[i];
-            } 
-        } 
-
-        if (!possible) {
-            cout << "NO";
-        } else {
-            if (swipes[0] == 0 && swipes[l-1] == n-1) {
-                cout << "NO";
+        cout << "YES" << endl << possibleSwipes.size() << endl;
+        for (vi swipe : possibleSwipes) {
+            if (swipe[0] == 0) {
+                cout << "L ";
             } else {
-                if (swipes[0] != 0) {
-                    if (initial[swipes[0]-1] == lastNumber) { // right swipe
-                        cout << "YES" << endl << 1 << endl << "R " << swipes[0]-1 << " " << swipes[l-1];
-                        return 0;
-                    } 
-                }
-                if (swipes[l-1] != n-1) {
-                    if (initial[swipes[l-1]+1] == lastNumber) { // left swipe
-                        cout << "YES" << endl << 1 << endl << "L " << swipes[0] << " " << swipes[l-1]+1;
-                        return 0;
-                    }
-                }
-                cout << "NO";
-            }
+                cout << "R ";
+            } 
+            cout << start << " " << end;
         }
     }
 }
