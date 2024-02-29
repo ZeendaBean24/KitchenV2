@@ -19,6 +19,10 @@
 - [x] [S1-GoodFoursAndGoodFives.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2022/S1-GoodFoursAndGoodFives.cpp)
 ## 2023
 - [x] [J5-CCCWordHunt.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2023/J5-CCCWordHunt.cpp)
+## 2024
+- [x] [S1.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2024/S1.cpp)
+- [x] [S2.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2024/S2.cpp)
+- [x] [S3.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/CCC/2024/S3.cpp)
 # DMOJ
 - [x] [HCI16_Oversleep.cpp](https://github.com/ZeendaBean24/KitchenV2/blob/master/DMOJ/HCI16_Oversleep.cpp)
 # JuniorProgrammingSheet
