@@ -15,4 +15,21 @@ int main() {
     // freopen("problemname.in", "r", stdin);
     // freopen("problemname.out", "w", stdout);
 
+	int n; cin >> n;
+
+    vi hats;
+    REP(i,0,n) {
+        int h; cin >> h;
+        hats.push_back(h);
+    }   
+
+    int ans = 0;
+    REP(i,0,(n/2)) {
+        if (hats[i] == hats[i+(n/2)]) {
+            ans += 2;
+        }
+    }
+    
+    cout << ans;
+    
 }
