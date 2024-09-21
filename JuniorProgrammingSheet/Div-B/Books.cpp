@@ -22,10 +22,21 @@ int main() {
     	cin >> books[i];
     }
 
+    if (n == 1) {
+    	for (ll book : books) {
+    		if (book <= t) {
+    			cout << 1; 
+    			return 0;
+    		}
+    	}
+    	cout << 0;
+    	return 0;
+    }
+
     int leftPointer = 0;
     int rightPointer = 0;
     int total = books[0];
-    ll maximum = 0;
+    int maximum = 0;
 
     while (rightPointer < n-1) {
     	if (books[rightPointer+1] + total <= t) {
@@ -38,12 +49,8 @@ int main() {
     	maximum = max(maximum, rightPointer - leftPointer + 1);
     }
 
-    cout << rightPointer << " " << leftPointer << endl;
-    if (rightPointer == leftPointer && books[leftPointer] > t) {
-    	cout << 0;
-    } else {
-    	cout << maximum;
-    }
+    // cout << rightPointer << " " << leftPointer << endl;
+    cout << maximum;
 
     return 0;
 }
