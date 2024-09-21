@@ -12,8 +12,8 @@ typedef pair<int, int> pii; typedef pair<long long, long long> pll;
 
 int main() {
     fastio;
-    // freopen("problemname.in", "r", stdin);
-    // freopen("problemname.out", "w", stdout);
+    // freopen("paintbarn.in", "r", stdin);
+    // freopen("paintbarn.out", "w", stdout);
 
     int n, k; cin >> n >> k;
 
@@ -26,22 +26,22 @@ int main() {
     	maxY = max(maxY, y2);
     	regions.push_back({x1, y1, x2, y2});
     }
+// 
+    vector<vi> differenceMatrix(maxY+1, vi(maxX+1, 0));
 
-    vector<vi> differenceMatrix(maxY, vi(maxX+2, 0));
-
-    for (vi i : differenceMatrix) {
-    	for (int j : i) {
-    		cout << j << " ";
-    	}
-    	cout << endl;
-    }
-    cout << endl;
+    // for (vi i : differenceMatrix) {
+    // 	for (int j : i) {
+    // 		cout << j << " ";
+    // 	}
+    // 	cout << endl;
+    // }
+    // cout << endl;
 
     for (vi rect : regions) {
-    	for (int i = maxY-rect[1]; i > maxY-rect[3]-1; i--) {
-    		differenceMatrix[i][rect[0]]++;
-    		differenceMatrix[i][rect[2]+1]--;
-    	}
+        differenceMatrix[rect[1]][rect[0]]++;
+        differenceMatrix[rect[1]][rect[2]]--;
+        differenceMatrix[rect[3]][rect[0]]--;
+        differenceMatrix[rect[3]][rect[2]]++;
     	// for (vi i : differenceMatrix) {
 	    // 	for (int j : i) {
 	    // 		cout << j << " ";
@@ -58,20 +58,27 @@ int main() {
     	cout << endl;
     }
     cout << endl;
+
+    int count = 0;
     
-    REP(i,0,maxY) {
-    	REP(j,2,maxX+2) {
-    		differenceMatrix[i][j] += differenceMatrix[i][j-1];
-    	}
+    REP(i,1,maxY+1) {
+        REP(j,1,maxX+2) {
+            differenceMatrix[i][j] = differenceMatrix[i][j] + differenceMatrix[i][j-1] + differenceMatrix[i-1][j] - differenceMatrix[i-1][j-1];
+            if (differenceMatrix[i][j] == k) {
+                count++;
+            }
+        }
     }
 
-    for (vi i : differenceMatrix) {
-    	for (int j : i) {
-    		cout << j << " ";
-    	}
-    	cout << endl;
-    }
-    cout << endl;
+    cout << count;
 
+    // cout << endl;
+    // for (vi i : differenceMatrix) {
+    // 	for (int j : i) {
+    // 		cout << j << " ";
+    // 	}
+    // 	cout << endl;
+    // }
+    
     return 0;
 }
