@@ -33,39 +33,39 @@ int main() {
     int leftPointer = 0;
     int rightPointer = n-1;
 
-    while (true) {
-        ll pairSum = cows[leftPointer].first + cows[rightPointer].first;
-        maximum = max(maximum, pairSum);
+    while (leftPointer <= rightPointer) {
+        // ll pairSum = cows[leftPointer].first + cows[rightPointer].first;
+        // maximum = max(maximum, pairSum);
 
-        if (leftPointer == rightPointer) {
-            break;
-        }
+        // if (leftPointer == rightPointer) {
+        //     break;
+        // }
 
-        ll numPairs = min(cows[leftPointer].second, cows[rightPointer].second);
-        cows[leftPointer].second -= numPairs;
-        cows[rightPointer].second -= numPairs;
+        // ll numPairs = min(cows[leftPointer].second, cows[rightPointer].second);
+        // cows[leftPointer].second -= numPairs;
+        // cows[rightPointer].second -= numPairs;
 
-        if (cows[leftPointer].second == 0) {
-            leftPointer++;
-        }
-
-        if (cows[rightPointer].second == 0) {
-            rightPointer--;
-        } 
-
-        // if (cows[leftPointer].second == cows[rightPointer].second) {
-        //     maximum = max(maximum, cows[leftPointer].first + cows[rightPointer].first);
-        //     leftPointer++;
-        //     rightPointer--;
-        // } else if (cows[leftPointer].second > cows[rightPointer].second) {
-        //     maximum = max(maximum, cows[leftPointer].first + cows[rightPointer].first);
-        //     cows[leftPointer].first -= cows[rightPointer].first;
-        //     rightPointer--;
-        // } else if (cows[leftPointer].second < cows[rightPointer].second) {
-        //     maximum = max(maximum, cows[leftPointer].first + cows[rightPointer].first);
-        //     cows[rightPointer].first -= cows[leftPointer].first;
+        // if (cows[leftPointer].second == 0) {
         //     leftPointer++;
         // }
+
+        // if (cows[rightPointer].second == 0) {
+        //     rightPointer--;
+        // } 
+
+        if (cows[leftPointer].second == cows[rightPointer].second) {
+            maximum = max(maximum, cows[leftPointer].first + cows[rightPointer].first);
+            leftPointer++;
+            rightPointer--;
+        } else if (cows[leftPointer].second > cows[rightPointer].second) {
+            maximum = max(maximum, cows[leftPointer].first + cows[rightPointer].first);
+            cows[leftPointer].second -= cows[rightPointer].second;
+            rightPointer--;
+        } else if (cows[leftPointer].second < cows[rightPointer].second) {
+            maximum = max(maximum, cows[leftPointer].first + cows[rightPointer].first);
+            cows[rightPointer].second -= cows[leftPointer].second;
+            leftPointer++;
+        }
     }
 
     cout << maximum;
