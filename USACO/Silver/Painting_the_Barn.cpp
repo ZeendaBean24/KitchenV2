@@ -12,8 +12,8 @@ typedef pair<int, int> pii; typedef pair<long long, long long> pll;
 
 int main() {
     fastio;
-    // freopen("paintbarn.in", "r", stdin);
-    // freopen("paintbarn.out", "w", stdout);
+    freopen("paintbarn.in", "r", stdin);
+    freopen("paintbarn.out", "w", stdout);
 
     int n, k; cin >> n >> k;
 
@@ -22,6 +22,7 @@ int main() {
     int maxY = 0;
     REP(i,0,n) {
     	int x1, y1, x2, y2; cin >> x1 >> y1 >> x2 >> y2;
+        x1++; y1++; x2++; y2++;
     	maxX = max(maxX, x2);
     	maxY = max(maxY, y2);
     	regions.push_back({x1, y1, x2, y2});
@@ -51,13 +52,13 @@ int main() {
 	    // cout << endl;
     }
 
-    for (vi i : differenceMatrix) {
-    	for (int j : i) {
-    		cout << j << " ";
-    	}
-    	cout << endl;
-    }
-    cout << endl;
+    // for (vi i : differenceMatrix) {
+    // 	for (int j : i) {
+    // 		cout << j << " ";
+    // 	}
+    // 	cout << endl;
+    // }
+    // cout << endl;
 
     int count = 0;
     
