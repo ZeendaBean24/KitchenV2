@@ -10,39 +10,35 @@ typedef pair<int, int> pii; typedef pair<long long, long long> pll;
 #define REP(i,a,b) for (int i = a; i < b; i++)
 #define SQ(a) (a)*(a)
 
-bool ycmp(pii p, pii q) {
-	return p.second < q.second;
-};
-
 int main() {
     fastio;
     // freopen("problemname.in", "r", stdin);
     // freopen("problemname.out", "w", stdout);
 
-    int n; cin >> n;
-    vector<pll> pairs;
+    int n, m; cin >> n >> m;
 
+    multiset<ll> ms;
     REP(i,0,n) {
-    	ll x, y; cin >> x >> y;
-    	pairs.push_back(make_pair(x, y));
+    	ll h; cin >> h;
+    	ms.insert(h);
     }
 
-    sort(pairs.begin(), pairs.end());
-    REP(i,0,n) {
-    	pairs[i].first = i + 1;
+    vll prices(m);
+    REP(i,0,m) {
+    	cin >> prices[i];
     }
 
-    sort(pairs.begin(), pairs.end(), ycmp);
-    REP(i,0,n) {
-    	pairs[i].second = i + 1;
+    for (ll price : prices) {
+    	auto it = ms.upper_bound(price);
+    	if (it != ms.begin()) {
+    		it--;
+	    	cout << *it;
+	    	ms.erase(ms.find(*it));
+    	} else {
+    		cout << -1;
+    	}
+    	cout << endl;
     }
-
-    REP(i,0,n) {
-    	cout << pairs[i].first << " " << pairs[i].second << endl;
-    }
-
-
-    sort(pairs.begin(), pairs.end());
 
     return 0;
 }
