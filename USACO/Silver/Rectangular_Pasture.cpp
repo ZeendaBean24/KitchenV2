@@ -41,8 +41,7 @@ int main() {
     	cout << pairs[i].first << " " << pairs[i].second << endl;
     }
 
-
-    sort(pairs.begin(), pairs.end());
+    // sort(pairs.begin(), pairs.end());
 
     return 0;
 }
