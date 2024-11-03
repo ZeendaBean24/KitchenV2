@@ -37,11 +37,60 @@ int main() {
     	pairs[i].second = i + 1;
     }
 
+    // REP(i,0,n) {
+    // 	cout << pairs[i].first << " " << pairs[i].second << endl;
+    // }
+
+    vector<vll> prefixSum(n+1, vll(n+1, 0));
     REP(i,0,n) {
-    	cout << pairs[i].first << " " << pairs[i].second << endl;
+        prefixSum[pairs[i].second][pairs[i].first]++;
     }
 
-    // sort(pairs.begin(), pairs.end());
+    // for (vi v : prefixSum) {
+    //     for (int i : v) {
+    //         cout << i << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    REP(i,1,n+1) {
+        REP(j,1,n+1) {
+            prefixSum[i][j] += prefixSum[i-1][j] + prefixSum[i][j-1] - prefixSum[i-1][j-1];
+        }
+    }
+
+    // for (vi v : prefixSum) {
+    //     for (int i : v) {
+    //         cout << i << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    ll count = 0;
+
+    REP(i,0,n-1) {
+        REP(j,i+1,n) {
+            // pii left, right;
+            // if (pairs[i].first > pairs[i].second) {
+            //     right = make_pair(pairs[i].first, pairs[i].second);
+            //     left = make_pair(pairs[j].first, pairs[j].second);
+            // } else {
+            //     left = make_pair(pairs[i].first, pairs[i].second);
+            //     right = make_pair(pairs[j].first, pairs[j].second);
+            // }
+            ll left, right, up, down;
+            left = min(pairs[i].first, pairs[j].first);
+            right = max(pairs[i].first, pairs[j].first);
+            up = pairs[j].second;
+            down = pairs[i].second;
+            ll leftCount = prefixSum[up][left] - prefixSum[up][0] - prefixSum[down-1][left] + prefixSum[down-1][0];
+            ll rightCount = prefixSum[up][n] - prefixSum[up][right-1] - prefixSum[down-1][n] + prefixSum[down-1][right-1];
+            // cout << "Lower Bound " << down << " Upper Bound " << up << " " << leftCount << " " << rightCount << endl;
+            count += leftCount * rightCount;
+        }
+    }
+
+    cout << count + n + 1;
 
     return 0;
 }
