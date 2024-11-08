@@ -1,19 +1,49 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-typedef long long ll; typedef long double ld;
-typedef vector<int> vi; typedef vector<double> vd; typedef vector<string> vs; typedef vector<char> vc; typedef vector<long long> vll; typedef vector<bool> vb;
-typedef pair<int, int> pii; typedef pair<long long, long long> pll;
+typedef long long ll;
+typedef pair<ll, ll> pll;
 
 #define fastio ios_base::sync_with_stdio(false); cin.tie(nullptr)
 #define REP(i,a,b) for (int i = a; i < b; i++)
-#define SQ(a) (a)*(a)
 
 int main() {
     fastio;
-    // freopen("problemname.in", "r", stdin);
-    // freopen("problemname.out", "w", stdout);
 
-    return 0;
+    int n, k;
+    cin >> n >> k;
+
+    vector<pll> movies;
+    REP(i,0,n) {
+        ll a, b;
+        cin >> a >> b;
+        movies.push_back({b, a}); 
+    }
+
+    sort(movies.begin(), movies.end());
+
+    multiset<ll> endTimes;
+    REP(i,0,k) {
+        endTimes.insert(0); 
+    }
+
+    int count = 0;
+    for (pll movie : movies) {
+        ll endTime = movie.first;
+        ll startTime = movie.second;
+
+        auto it = endTimes.upper_bound(startTime); 
+        if (it == endTimes.begin()) {
+            continue; 
+        }
+        
+        --it; 
+        endTimes.erase(it); 
+
+        endTimes.insert(endTime);
+        count++; 
+    }
+
+    cout << count; 
+    return 0; 
 }
