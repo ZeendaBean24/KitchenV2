@@ -10,6 +10,7 @@ typedef pair<int, int> pii; typedef pair<long long, long long> pll;
 #define REP(i,a,b) for (int i = a; i < b; i++)
 #define SQ(a) (a)*(a)
  
+
 // Structure to represent a measurement log
 struct Measurement {
     int day;
@@ -18,9 +19,9 @@ struct Measurement {
 };
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    // freopen("measurement.in", "r", stdin);  // Input file
-    // freopen("measurement.out", "w", stdout); // Output file
+    fastio;
+    freopen("measurement.in", "r", stdin); 
+    freopen("measurement.out", "w", stdout); 
 
     int N, G; // Number of logs and the initial milk production level
     cin >> N >> G;
@@ -52,34 +53,56 @@ int main() {
         int& currentMilk = cowMilkProduction[log.cow]; // Current milk production of this cow
 
         // Check if this cow was part of the top producers
-        bool wasTopProducer = (currentMilk == productionCounts.begin()->first);
+        bool wasTopProducer = false;
+        if (currentMilk == productionCounts.begin()->first) {
+            wasTopProducer = true;
+        }
 
         // Get the count of cows producing at the cow's current milk level
-        int oldCount = productionCounts[currentMilk]--;
-
-        // Remove the milk level from the map if no cows are left producing that amount
+        int oldCount = productionCounts[currentMilk];
+        bool wasLastTopCow = false;
         if (oldCount == 1) {
-            productionCounts.erase(currentMilk);
+            wasLastTopCow = true;
+        }
+
+        // Update productionCounts to remove the cow's previous milk production
+        productionCounts[currentMilk]--;
+        if (productionCounts[currentMilk] == 0) {
+            productionCounts.erase(currentMilk); // Remove this production level if no cows produce this amount anymore
         }
 
         // Update the cow's milk production with the delta
         currentMilk += log.delta;
 
         // Add the new milk production to the productionCounts map
-        int newCount = ++productionCounts[currentMilk];
+        productionCounts[currentMilk]++;
+        int newCount = productionCounts[currentMilk];
 
-        // Check if this cow is now part of the top producers
-        bool isTopProducer = (currentMilk == productionCounts.begin()->first);
+        bool isNowTopProducer = false;
+        if (currentMilk == productionCounts.begin()->first) {
+            isNowTopProducer = true;
+        }
 
-        // Determine if the leaderboard has changed
+        bool isOnlyTopCow = false;
+        if (newCount == 1) {
+            isOnlyTopCow = true;
+        }
+
+        // Handle display changes
         if (wasTopProducer) {
-            // If it was a top producer but something about the leaderboard has changed
-            if (!isTopProducer || oldCount != 1 || newCount != 1) {
-                ++displayChanges;
+            // If the cow was a top producer before the update
+            if (!isNowTopProducer || !wasLastTopCow || !isOnlyTopCow) {
+                // The display changes if:
+                // - This cow is no longer a top producer, OR
+                // - It was the last top producer at its level before, OR
+                // - It is now not the sole top producer at the new level
+                displayChanges++;
             }
-        } else if (isTopProducer) {
-            // If it wasn't a top producer but is now part of the top producers
-            ++displayChanges;
+        } else {
+            if (isNowTopProducer) {
+                // If the cow wasn't a top producer before, but it is now
+                displayChanges++;
+            }
         }
     }
 
@@ -87,81 +110,3 @@ int main() {
     cout << displayChanges << endl;
     return 0;
 }
-
-// int main() {
-//     fastio;
-//     // freopen("measurement.in", "r", stdin);
-//     // freopen("measurement.out", "w", stdout);
-
-//     ll n, g; cin >> n >> g;
-
-//     vector<pair<ll, pll>> logs; 
-//     map<ll, ll> cowIdToMilkQuantity;
-//     set<ll> topProducers;
-//     REP(i,0,n) {
-//     	ll day, id; string c; cin >> day >> id >> c;
-//     	ll change;
-//     	if (c[0] == '+') {
-//     		change = stoi(c.substr(1));
-//     	} else {
-//     		change = stoi(c.substr(1)) * -1;
-//     	}
-//     	cowIdToMilkQuantity[id] = g;
-//     	logs.push_back(make_pair(day, make_pair(id, change)));
-//         topProducers.insert(id);
-//     }
-
-//     sort(logs.begin(), logs.end());
-
-//     map<ll, ll> milkQuantityToCows;
-//     milkQuantityToCows[g] = n;
-
-//     int count = 0;
-//     ll currentTopProduction = g;
-
-//     set<ll> previousTopProducers = topProducers; // Initialize previousTopProducers
-
-//     // cout << "Cycle -1 " << " Top Production " << currentTopProduction << " Top Production Cows " << currentTopProductionCows << endl;  
-//     REP(i,0,n) {
-//     	ll id = (logs[i].second).first;
-//     	ll change = (logs[i].second).second;
-//     	ll prevQuantity = cowIdToMilkQuantity[id];
-
-//     	// Update quantity 
-//     	cowIdToMilkQuantity[id] += change;
-//     	ll newQuantity = cowIdToMilkQuantity[id];
-//     	milkQuantityToCows[prevQuantity]--;
-//     	if (milkQuantityToCows[prevQuantity] == 0) {
-//     		milkQuantityToCows.erase(prevQuantity);
-//     	}
-//     	milkQuantityToCows[newQuantity]++;
-
-//         // Update topProducers
-//         if (newQuantity < currentTopProduction) {
-//             topProducers.erase(id); // Remove cow from top producers
-//         } else if (newQuantity >= currentTopProduction) {
-//             if (newQuantity > currentTopProduction) {
-//                 // New top production level, clear previous top producers
-//                 currentTopProduction = newQuantity;
-//                 topProducers.clear();
-//             }
-//             topProducers.insert(id); // Add cow to top producers
-//         }
-
-//         // Handle display changes
-//         auto it = milkQuantityToCows.rbegin(); // Reverse iterator for max
-//         ll newTopMilk = it->first;
-//         ll newTopCount = it->second;
-
-//         if (newTopMilk != currentTopProduction || topProducers != previousTopProducers) {
-//             count++;
-//             currentTopProduction = newTopMilk;
-//             previousTopProducers = topProducers; // Update previousTopProducers
-//         }
-//         	// cout << "Cycle " << i << " Top Production " << currentTopProduction << " Top Production Cows " << currentTopProductionCows << endl;  
-//     }
-
-//     cout << count;
-
-//     return 0;
-// }
