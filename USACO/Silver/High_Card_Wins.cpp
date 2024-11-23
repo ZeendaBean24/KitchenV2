@@ -12,14 +12,40 @@ typedef pair<int, int> pii; typedef pair<long long, long long> pll;
 
 int main() {
     fastio;
-    // freopen("problemname.in", "r", stdin);
-    // freopen("problemname.out", "w", stdout);
+    freopen("highcard.in", "r", stdin);
+    freopen("highcard.out", "w", stdout);
 
     int n; cin >> n;
 
+    vi isElsie(2*n); // 1-index
     REP(i,0,n) {
-
+        int c; cin >> c;
+        isElsie[c-1]++;
     }
+
+    vi elsie; vi bessie;
+    REP(i,0,2*n) {
+        if (isElsie[i] == 1) {
+            elsie.push_back(i);
+        } else {
+            bessie.push_back(i);
+        }
+    }
+
+    int count = 0;
+    int elsieIndex = 0;
+    int bessieIndex = 0;
+    while (elsieIndex < n && bessieIndex < n) {
+        if (bessie[bessieIndex] > elsie[elsieIndex]) {
+            count++;
+            bessieIndex++;
+            elsieIndex++;
+        } else {
+            bessieIndex++;
+        }
+    }
+    
+    cout << count;
 
     return 0;
 }
